@@ -13,7 +13,7 @@ import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { UsersModule } from './users/users.module';
 
-import { User } from './database/models/users.model';
+import { User } from '../models/users.model';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
