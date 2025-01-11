@@ -12,7 +12,7 @@
 import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { UsersModule } from './users/users.module';
-
+import pg from 'pg';
 import { User } from '../models/users.model';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -32,6 +32,7 @@ require('dotenv').config();
       // password: process.env.PGPASSWORD,
       // database: process.env.PGDATABASE,
       // host: process.env.PGHOST,
+      dialectModule: pg,
       dialectOptions: {
         ssl: {
           require: true, // Requiere SSL
