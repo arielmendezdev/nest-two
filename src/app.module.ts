@@ -32,13 +32,13 @@ require('dotenv').config();
       // password: process.env.PGPASSWORD,
       // database: process.env.PGDATABASE,
       // host: process.env.PGHOST,
-      dialectModule: pg,
-      dialectOptions: {
-        ssl: {
-          require: true, // Requiere SSL
-          rejectUnauthorized: false, // Si es un certificado auto-firmado
-        },
-      },
+      // dialectModule: pg,
+      // dialectOptions: {
+      //   ssl: {
+      //     require: true, // Requiere SSL
+      //     rejectUnauthorized: false, // Si es un certificado auto-firmado
+      //   },
+      // },
       models: [User],
     }),
     UsersModule,
