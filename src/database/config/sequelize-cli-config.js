@@ -13,8 +13,8 @@ module.exports = {
     host: process.env.PGHOST,
     dialectOptions: {
       ssl: {
-        require: true, // Requiere SSL
-        rejectUnauthorized: false, // Si es un certificado auto-firmado
+        require: true,
+        rejectUnauthorized: false,
       },
     },
   },
@@ -26,8 +26,8 @@ module.exports = {
     dialect: 'postgres',
     dialectOptions: {
       ssl: {
-        require: true, // Requiere SSL
-        rejectUnauthorized: false, // Si es un certificado auto-firmado
+        require: true,
+        rejectUnauthorized: false,
       },
     },
   },
@@ -43,8 +43,8 @@ module.exports = {
     host: process.env.PGHOST,
     dialectOptions: {
       ssl: {
-        require: true, // Requiere SSL
-        rejectUnauthorized: false, // Si es un certificado auto-firmado
+        require: true,
+        rejectUnauthorized: false,
       },
     },
   },

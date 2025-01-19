@@ -6,6 +6,7 @@ import { Address } from '@/database/models/address.model';
 
 @Module({
   imports: [SequelizeModule.forFeature([Address])],
+  exports: [SequelizeModule],
   controllers: [AddressesController],
   providers: [AddressesService],
 })
