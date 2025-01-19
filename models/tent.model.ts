@@ -1,4 +1,3 @@
-import { UUIDTypes } from 'uuid';
 import { Column, DataType, HasOne, Model, Table } from 'sequelize-typescript';
 import { User } from './user.model';
 
@@ -9,7 +8,7 @@ export class Tent extends Model<Tent> {
     primaryKey: true,
     defaultValue: DataType.UUIDV4,
   })
-  id: UUIDTypes;
+  id: string;
 
   @Column({
     type: DataType.STRING,

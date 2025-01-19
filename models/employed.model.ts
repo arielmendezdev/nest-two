@@ -1,66 +1,63 @@
-import { UUIDTypes } from "uuid";
 import { BelongsTo, Column, DataType, ForeignKey, Model, Table } from "sequelize-typescript";
 import { Company } from "./company.model";
 
-@Table({ tableName: 'employees', timestamps: true }) 
+@Table({ tableName: 'employees', timestamps: true })
 export class Employed extends Model<Employed> {
   @Column({
     type: DataType.UUID,
     primaryKey: true,
-    defaultValue: DataType.UUIDV4
+    defaultValue: DataType.UUIDV4,
   })
-  id: UUIDTypes
+  id: string;
 
   @Column({
     type: DataType.STRING,
     allowNull: false,
   })
-  firstName: string
-  
+  firstName: string;
+
   @Column({
     type: DataType.STRING,
     allowNull: false,
   })
-  lastName: string
-  
+  lastName: string;
+
   @Column({
     type: DataType.STRING,
     allowNull: false,
   })
-  dni: string
-  
+  dni: string;
+
   @Column({
     type: DataType.STRING,
     allowNull: false,
   })
-  phone: string
-  
+  phone: string;
+
   @Column({
     type: DataType.STRING,
   })
-  email: string
-  
+  email: string;
+
   @Column({
     type: DataType.STRING,
     defaultValue: false,
   })
-  isDeleted: boolean
-  
+  isDeleted: boolean;
+
   @Column({
     type: DataType.STRING,
     defaultValue: true,
-    
   })
-  isAvailable: boolean
-  
+  isAvailable: boolean;
+
   @ForeignKey(() => Company)
   @Column({
     type: DataType.UUID,
     allowNull: false,
   })
-  companyId: UUIDTypes
+  companyId: string;
 
   @BelongsTo(() => Company)
-  company!: Company
-
+  company!: Company;
 }

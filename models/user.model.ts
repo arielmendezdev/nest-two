@@ -1,4 +1,3 @@
-import { UUIDTypes } from 'uuid';
 import {
   BelongsTo,
   Column,
@@ -19,7 +18,7 @@ export class User extends Model<User> {
     primaryKey: true,
     defaultValue: DataType.UUIDV4,
   })
-  id: UUIDTypes;
+  id: string;
 
   @Column({
     type: DataType.STRING,
@@ -71,13 +70,13 @@ export class User extends Model<User> {
   @Column({
     type: DataType.UUID,
   })
-  tentId!: UUIDTypes;
+  tentId!: string;
 
   @ForeignKey(() => Umbrella)
   @Column({
     type: DataType.UUID,
   })
-  umbrellaId!: UUIDTypes;
+  umbrellaId!: string;
 
   @BelongsTo(() => Tent)
   tent!: Tent;
