@@ -4,10 +4,10 @@ import { InjectModel } from '@nestjs/sequelize';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 
-import { User } from 'models/user.model';
-import { Address } from 'models/address.model';
-import { Tent } from 'models/tent.model';
-import { Umbrella } from 'models/umbrella.model';
+import { User } from '@/database/models/user.model';
+import { Address } from '@/database/models/address.model';
+import { Tent } from '@/database/models/tent.model';
+import { Umbrella } from '@/database/models/umbrella.model';
 
 @Injectable()
 export class UsersService {

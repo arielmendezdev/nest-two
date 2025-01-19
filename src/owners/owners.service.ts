@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { CreateOwnerDto } from './dto/create-owner.dto';
 import { UpdateOwnerDto } from './dto/update-owner.dto';
 import { InjectModel } from '@nestjs/sequelize';
-import { Owner } from 'models/owner.model';
-import { Company } from 'models/company.model';
+import { Owner } from '@/database/models/owner.model';
+import { Company } from '@/database/models/company.model';
 
 @Injectable()
 export class OwnersService {
