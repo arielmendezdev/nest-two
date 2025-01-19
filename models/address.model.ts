@@ -7,10 +7,11 @@ import {
   Model,
   Table,
 } from 'sequelize-typescript';
-import { User } from './user.model';
+
 import { Employed } from './employed.model';
 import { Company } from './company.model';
 import { Owner } from './owner.model';
+import { User } from './user.model';
 
 @Table({ tableName: 'addresses', timestamps: true })
 export class Address extends Model<Address> {
