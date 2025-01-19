@@ -8,10 +8,12 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
+      forbidNonWhitelisted: true,
+      transform: true,
     }),
   );
 
-  // app.setGlobalPrefix('api/v1') // Esto es para asignarle a todas las urls el prefijo
+  app.setGlobalPrefix('api/v1') // Esto es para asignarle a todas las urls el prefijo
 
   await app.listen(process.env.PORT ?? 3000);
 }
